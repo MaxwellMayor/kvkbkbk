@@ -1,10 +1,10 @@
 import pandas as pd
 
 # create a dataframe using final.csv file
-df = pd.read_csv('final.csv')
+df = pd.read_csv('articles.csv')
 
 # sorting dataframe : wrt to weighted rating col in ascending order
 df = df.sort_values('weighted_rating' , ascending = False)
 
 # final dataframe
-output = df[['original_title' , 'poster_link' , 'runtime', 'release_date' , 'weighted_rating' ]].head(20)
+output = df[["url", "title", "text", "lang", "total_events"]].head(20)
